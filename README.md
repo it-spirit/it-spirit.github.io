@@ -1,1 +1,0 @@
-# it-spirit.github.io
