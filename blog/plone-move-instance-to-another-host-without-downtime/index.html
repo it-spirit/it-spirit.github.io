@@ -4,7 +4,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 
   <head>
-      <title>it-spir.it</title>
+        <title>it-spir.it</title>
 
       <!-- Meta -->
       <meta charset="utf-8" />
@@ -38,6 +38,12 @@
       <link rel="stylesheet" href="/theme/css/custom.css" />
 
       <!-- Syndication links -->
+
+
+
+    <meta name="tags" content="Nginx" />
+    <meta name="tags" content="Plone" />
+
   </head>
 
     <body class="boxed-layout container header-fixed">
@@ -77,10 +83,80 @@
 <!--=== End Header v3 ===-->
       <!--=== Content Part ===-->
       <div class="container content-sm">
-<ul>
-    <li><a href="/category/coding.html">coding</a></li>
-    <li><a href="/category/hosting.html">Hosting</a></li>
-</ul>
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="/blog/plone-move-instance-to-another-host-without-downtime/" rel="bookmark"
+         title="Permalink to Plone: Move instance to another host without downtime">Plone: Move instance to another host without downtime</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <abbr class="published" title="2012-04-03T00:00:00+02:00">
+      Di 03 April 2012
+    </abbr>
+    <address class="vcard author">
+      By           <a class="url fn" href="/author/it-spirit.html">it-spir.it</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p>At <a class="reference external" href="http://propertyshelf.com">Propertyshelf</a> we're hosting a lot of Plone sites.
+Therefor we use virtual machines.
+When sites within an instance grow, it might be necessary to add or extend some components, like adding more ZEO clients or caching (using Varnish or Squid).
+But what if the virtual machines don't have enough power to handle this?
+Then those Plone instances have to be migrated to another, more powerful machine.</p>
+<p>The problem then is to do this without any downtime.
+Of course you first have to create a copy of the existing Plone instance on the new machine, create a snapshot backup of all the related data, and restore this data on the new machine.
+But what about the connected domains?
+The IP addresses differ (if you don't use one webserver that does all the domain handling).
+It can take up to several hours to update all the domains on the root DNS servers.
+But you want your sites online, with up to date data.</p>
+<div class="section" id="nginx-configuration-proxy-pass">
+<h2>Nginx configuration: proxy_pass</h2>
+<p>We're using Nginx as webserver for several reasons (of course Apache does the job as well).
+So the following examples are taken from our Nginx config.</p>
+<p>Imagine you have the following config on your actual server:</p>
+<pre class="literal-block">
+server {
+  listen ip-of-actual-server:80;
+  server_name your-domain.com;
+  location / {
+    proxy_pass http://127.0.0.1:8080/VirtualHostBase/http/your-domain.com:80/your-site/VirtualHostRoot/;
+  }
+}
+</pre>
+<p>On your new server, add the same config.
+The only thing that changes is the IP address:</p>
+<pre class="literal-block">
+server {
+  listen ip-of-new-server:80;
+  server_name your-domain.com;
+  location / {
+    proxy_pass http://127.0.0.1:8080/VirtualHostBase/http/your-domain.com:80/your-site/VirtualHostRoot/;
+  }
+}
+</pre>
+<p>Now, on your old server, adjust the config for your domain.
+Use the proxy_pass directive to point to your new server.
+The important part is the proxy_set_header directive:</p>
+<pre class="literal-block">
+server {
+  listen ip-of-actual-server:80;
+  server_name your-domain.com;
+  location / {
+    proxy_pass          http://your-new-server;
+    proxy_redirect      off;
+    proxy_set_header    Host $host;
+  }
+}
+</pre>
+<p>That's it.
+Now you can move your instance, restart Nginx and update your DNS settings.
+It's save to remove the config on the old server after about one week.
+Then all the root DNS servers should be updated and have the new IP address for your domain.</p>
+</div>
+
+  </div><!-- /.entry-content -->
+</section>
       </div>
 
 <!--=== Footer Version 1 ===-->
