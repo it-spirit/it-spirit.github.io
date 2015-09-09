@@ -35,14 +35,18 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 STATIC_PATHS = [
-    'extra/README',
     'extra/LICENSE',
+    'extra/README',
+    'extra/favicon.ico',
 ]
 EXTRA_PATH_METADATA = {
-    'extra/README': {
-        'path': 'README.rst',
-    },
     'extra/LICENSE': {
         'path': 'LICENSE',
     },
+    'extra/README': {
+        'path': 'README.rst',
+    },
+    'extra/favicon.ico': {
+        'path': 'favicon.ico',
+    }
 }
