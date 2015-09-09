@@ -9,6 +9,9 @@ SITEURL = ''
 PATH = 'content'
 
 TIMEZONE = 'Europe/Berlin'
+DATE_FORMATS = {
+    'en': ('en_US', '%b %d, %Y'),
+}
 
 DEFAULT_LANG = u'en'
 
