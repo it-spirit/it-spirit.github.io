@@ -51,11 +51,11 @@ EXTRA_PATH_METADATA = {
     }
 }
 
-ARTICLE_URL = u'blog/{slug}/'
-ARTICLE_SAVE_AS = u'blog/{slug}/index.html'
+ARTICLE_URL = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}/'
+ARTICLE_SAVE_AS = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}/index.html'
 
 JINJA_EXTENSIONS = [
-    'jinja2.ext.with_',
+    u'jinja2.ext.with_',
 ]
 THEME = u'pelican_unify'
 
