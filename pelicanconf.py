@@ -50,3 +50,6 @@ EXTRA_PATH_METADATA = {
         'path': 'favicon.ico',
     }
 }
+
+ARTICLE_URL = u'blog/{slug}/'
+ARTICLE_SAVE_AS = u'blog/{slug}/index.html'
