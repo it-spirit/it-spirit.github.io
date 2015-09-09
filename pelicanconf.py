@@ -58,3 +58,10 @@ JINJA_EXTENSIONS = [
     'jinja2.ext.with_',
 ]
 THEME = u'pelican_unify'
+
+# Theme options
+UNIFY_FAVICON = u'favicon.ico'
+UNIFY_FOOTER = u'footer-v1'
+UNIFY_HEADER = u'header-v3'
+UNIFY_HEADER_FIXED = True
+UNIFY_LAYOUT_BOXED = True
