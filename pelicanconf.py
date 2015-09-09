@@ -69,6 +69,23 @@ THEME = u'pelican_unify'
 # Theme options
 UNIFY_FAVICON = u'favicon.ico'
 UNIFY_FOOTER = u'footer-v1'
+UNIFY_FOOTER_ABOUT = """
+<p>We love to build great software.</p>
+"""
+UNIFY_FOOTER_CONTACT = """
+<p>it-spirit<br>
+Regenleitenstr. 13<br>
+87600 Kaufbeuren, Germany<br>
+Phone: +49-(0)8341-9966186-0<br>
+Fax: +49-(0)8341-9966186-9<br>
+Email: <a href="mailto:info@it-spir.it" class="">info@it-spir.it</a></p>
+"""
+UNIFY_FOOTER_COPYRIGHT = """
+<p>Copyright &copy; 2015 <a href="http://it-spir.it"
+title="IT-Consulting &amp; Software Development">it-spirit</a>.
+All rights reserved.
+</p>
+"""
 UNIFY_HEADER = u'header-v3'
 UNIFY_HEADER_FIXED = True
 UNIFY_LAYOUT_BOXED = True
