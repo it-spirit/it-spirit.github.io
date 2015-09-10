@@ -91,8 +91,12 @@ UNIFY_SHOW_PAGE_BREADCRUMBS = True
 UNIFY_FAVICON = u'favicon.ico'
 UNIFY_FOOTER = u'footer-v1'
 UNIFY_FOOTER_ABOUT = """
-<p>We love to build great software.</p>
-"""
+<p>We love to <a href="{site_url}/services.html">turn ideas into
+beautiful things</a>.<br>We love to
+<a href="{site_url}/references.html">build great software</a>.<br>We love
+<a href="http://python.org" target="_blank">Python</a>.</p>
+""".format(site_url=SITEURL)
+
 UNIFY_FOOTER_CONTACT = """
 <p>it-spirit<br>
 Regenleitenstr. 13<br>
