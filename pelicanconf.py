@@ -111,6 +111,8 @@ title="IT-Consulting &amp; Software Development">it-spirit</a>.
 All rights reserved.
 </p>
 """
+UNIFY_FOOTER_RECENT_ARTICLES_COUNT = 3
+UNIFY_FOOTER_RECENT_ARTICLES_HEADLINE = u'Recent Blog Items'
 UNIFY_HEADER = u'header-v3'
 UNIFY_HEADER_FIXED = True
 UNIFY_HEADING_BLOG = u'Our blog: We show you what we think.'
