@@ -77,6 +77,7 @@ TAGS_SAVE_AS = u'tags/index.html'
 TAG_SAVE_AS = u'tags/{slug}.html'
 TAG_URL = u'tags/{slug}.html'
 
+DISPLAY_CATEGORIES_ON_MENU = False
 
 JINJA_EXTENSIONS = [
     u'jinja2.ext.with_',
