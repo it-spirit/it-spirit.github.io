@@ -2,6 +2,7 @@
 :summary: Over the past few days I had some time to finish what was planned for so long: integrate prettyPhoto (written by Stéphane Caron) into Plone.
           Here it is..."
 :tags: Plone
+:authors: Thomas Massmann
 
 Introduction
 ------------

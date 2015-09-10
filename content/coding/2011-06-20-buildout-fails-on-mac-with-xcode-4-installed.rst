@@ -2,6 +2,7 @@
 :summary: Installing Apple's Xcode 4 can cause some trouble when compiling Zope packages via buildout.
           This article shows the solution for this problem.
 :tags: MacOS, Buildout, Python
+:authors: Thomas Massmann
 
 Xcode4 dropped PPC support.
 After upgrading to Xcode 4 I realized some strange behaviors when running buildout (especially when creating a new Zope buildout where things have to be compiled).

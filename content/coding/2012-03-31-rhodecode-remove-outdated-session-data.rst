@@ -3,6 +3,7 @@
           By default the Beaker backend is set to file storage.
           Cleaning up those files by time is necessary.
 :tags: Mercurial, RhodeCode, Monitoring
+:authors: Thomas Massmann
 
 We use `RhodeCode <http://rhodecode.org/>`_ for our internal `Mercurial <http://mercurial.selenic.com/>`_ repositories.
 It's great for what it does: user and group management, repository groups, etc.

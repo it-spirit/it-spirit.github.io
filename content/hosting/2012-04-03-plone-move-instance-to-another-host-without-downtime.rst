@@ -3,6 +3,7 @@
           This article describes how do this without almost any downtime.
 :category: Hosting
 :tags: Nginx, Plone
+:authors: Thomas Massmann
 
 At `Propertyshelf <http://propertyshelf.com>`_ we're hosting a lot of Plone sites.
 Therefor we use virtual machines.
