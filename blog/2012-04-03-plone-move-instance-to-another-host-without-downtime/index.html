@@ -4,13 +4,12 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 
   <head>
-        <title>it-spir.it</title>
+        <title>  Plone: Move instance to another host without downtime &mdash; it-spir.it
+</title>
 
       <!-- Meta -->
       <meta charset="utf-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <meta content="" name="description" />
-      <meta content="" name="author" />
 
       <!-- Favicon -->
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -41,6 +40,8 @@
 
 
 
+    <meta name="author" content="Thomas Massmann" />
+
     <meta name="tags" content="Nginx" />
     <meta name="tags" content="Plone" />
 
@@ -69,11 +70,12 @@
       <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
         <div class="container">
           <ul class="nav navbar-nav">
-            <!-- Home -->
-            <li class="dropdown">
-              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Home</a>
-            </li>
-            <!-- End Home -->
+              <li><a href="/">Home</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/references.html">References</a></li>
+              <li><a href="/blog">Blog</a></li>
+
+
           </ul>
         </div><!--/end container-->
       </div><!--/navbar-collapse-->
@@ -81,25 +83,38 @@
   </div>
 </div>
 <!--=== End Header v3 ===-->
+
+      <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+      <div class="container">
+        <h1 class="pull-left">Our blog: We tell you what we think</h1>
+        <ul class="pull-right breadcrumb">
+          <li><a href="/" title="it-spir.it">Home</a></li>
+            <li><a href="/category/hosting.html" title="Hosting">Hosting</a></li>
+            <li class="active">Plone: Move instance to another host without downtime</li>
+        </ul>
+      </div>
+    </div>
+      <!--=== End Breadcrumbs ===-->
+
       <!--=== Content Part ===-->
-      <div class="container content-sm">
-<section id="content" class="body">
-  <header>
-    <h2 class="entry-title">
-      <a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime/" rel="bookmark"
-         title="Permalink to Plone: Move instance to another host without downtime">Plone: Move instance to another host without downtime</a></h2>
- 
-  </header>
-  <footer class="post-info">
-    <abbr class="published" title="2012-04-03T00:00:00+02:00">
-      Apr 03, 2012
-    </abbr>
-    <address class="vcard author">
-      By           <a class="url fn" href="/author/it-spirit.html">it-spir.it</a>
-    </address>
-  </footer><!-- /.post-info -->
-  <div class="entry-content">
-    <p>At <a class="reference external" href="http://propertyshelf.com">Propertyshelf</a> we're hosting a lot of Plone sites.
+  <!--=== Blog Posts ===-->
+  <div class="bg-color-light">
+    <div class="container content">
+      <div class="row">
+        <!-- Blog All Posts -->
+        <div class="col-md-9">
+          <div class="news-v3 bg-color-white margin-bottom-30">
+            <div class="news-v3-in">
+              <ul class="list-inline posted-info">
+                  <li>
+                      <a class="url fn" href="/author/thomas-massmann.html">Thomas Massmann</a>
+                  </li>
+                  <li><a href="/tags/nginx.html">Nginx</a> <a href="/tags/plone.html">Plone</a> </li>
+                <li><abbr title="2012-04-03T00:00:00+02:00">Apr 03, 2012</abbr></li>
+              </ul>
+              <h2><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime/" rel="bookmark" title="Permalink to Plone: Move instance to another host without downtime">Plone: Move instance to another host without downtime</a></h2>
+              <p>At <a class="reference external" href="http://propertyshelf.com">Propertyshelf</a> we're hosting a lot of Plone sites.
 Therefor we use virtual machines.
 When sites within an instance grow, it might be necessary to add or extend some components, like adding more ZEO clients or caching (using Varnish or Squid).
 But what if the virtual machines don't have enough power to handle this?
@@ -155,9 +170,18 @@ It's save to remove the config on the old server after about one week.
 Then all the root DNS servers should be updated and have the new IP address for your domain.</p>
 </div>
 
-  </div><!-- /.entry-content -->
-</section>
+            </div>
+          </div>
+        </div>
+        <!-- End Blog All Posts -->
+        <!-- Blog Sidebar -->
+        <div class="col-md-3">
+        </div>
+        <!-- End Blog Sidebar -->
       </div>
+    </div>
+  </div>
+  <!--=== End Blog Posts ===-->
 
 <!--=== Footer Version 1 ===-->
 <div class="footer-v1">
@@ -170,7 +194,10 @@ Then all the root DNS servers should be updated and have the new IP address for 
               <img id="logo-footer" class="footer-logo" src="/theme/img/logo2-default.png" alt="">
           </a>
           
-<p>We love to build great software.</p>
+<p>We love to <a href="/services.html">turn ideas into
+beautiful things</a>.<br>We love to
+<a href="/references.html">build great software</a>.<br>We love
+<a href="http://python.org" target="_blank">Python</a>.</p>
 
         </div>
         <!-- End About -->
@@ -182,9 +209,9 @@ Then all the root DNS servers should be updated and have the new IP address for 
               <h2>Latest Posts</h2>
             </div>
             <ul class="list-unstyled latest-list">
-                <li><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime/">Plone: Move instance to another host without downtime</a> <small>Apr 03, 2012</small></li>
-                <li><a href="/blog/2012-03-31-rhodecode-remove-outdated-session-data/">RhodeCode: remove outdated session data</a> <small>Mar 31, 2012</small></li>
-                <li><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed/">Buildout fails on Mac with Xcode 4 installed</a> <small>Jun 20, 2011</small></li>
+                  <li><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime/">Plone: Move instance to another host without downtime</a> <small>Apr 03, 2012</small></li>
+                  <li><a href="/blog/2012-03-31-rhodecode-remove-outdated-session-data/">RhodeCode: remove outdated session data</a> <small>Mar 31, 2012</small></li>
+                  <li><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed/">Buildout fails on Mac with Xcode 4 installed</a> <small>Jun 20, 2011</small></li>
             </ul>
           </div>
         </div>

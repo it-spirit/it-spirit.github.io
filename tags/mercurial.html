@@ -4,13 +4,11 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 
   <head>
-      <title>it-spir.it - Articles by it-spir.it</title>
+      <title>it-spir.it - Mercurial</title>
 
       <!-- Meta -->
       <meta charset="utf-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <meta content="" name="description" />
-      <meta content="" name="author" />
 
       <!-- Favicon -->
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -63,11 +61,12 @@
       <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
         <div class="container">
           <ul class="nav navbar-nav">
-            <!-- Home -->
-            <li class="dropdown">
-              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Home</a>
-            </li>
-            <!-- End Home -->
+              <li><a href="/">Home</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/references.html">References</a></li>
+              <li><a href="/blog">Blog</a></li>
+
+
           </ul>
         </div><!--/end container-->
       </div><!--/navbar-collapse-->
@@ -75,30 +74,21 @@
   </div>
 </div>
 <!--=== End Header v3 ===-->
+
+      <!--=== Breadcrumbs ===-->
+      <!--=== End Breadcrumbs ===-->
+
       <!--=== Content Part ===-->
-      <div class="container content-sm">
 <section id="content">
-<h2>Articles by it-spir.it</h2>
+<h2>All articles</h2>
 
 <ol id="post-list">
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime/" rel="bookmark" title="Permalink to Plone: Move instance to another host without downtime">Plone: Move instance to another host without downtime</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2012-04-03T00:00:00+02:00"> Apr 03, 2012 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="/author/it-spirit.html">it-spir.it</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <p class="first last">Sometimes it might be necessary to move a Plone instance to another host.
-This article describes how do this without almost any downtime.</p>
- </div><!-- /.entry-content -->
-        </article></li>
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="/blog/2012-03-31-rhodecode-remove-outdated-session-data/" rel="bookmark" title="Permalink to RhodeCode: remove outdated session data">RhodeCode: remove outdated session data</a></h2> </header>
                 <footer class="post-info">
                     <abbr class="published" title="2012-03-31T00:00:00+02:00"> Mar 31, 2012 </abbr>
                     <address class="vcard author">By
-                        <a class="url fn" href="/author/it-spirit.html">it-spir.it</a>
+                        <a class="url fn" href="/author/thomas-massmann.html">Thomas Massmann</a>
                     </address>
                 </footer><!-- /.post-info -->
                 <div class="entry-content"> <p class="first last">RhodeCode uses Beaker for session management.
@@ -106,33 +96,8 @@ By default the Beaker backend is set to file storage.
 Cleaning up those files by time is necessary.</p>
  </div><!-- /.entry-content -->
         </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed/" rel="bookmark" title="Permalink to Buildout fails on Mac with Xcode 4 installed">Buildout fails on Mac with Xcode 4 installed</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2011-06-20T00:00:00+02:00"> Jun 20, 2011 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="/author/it-spirit.html">it-spir.it</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <p class="first last">Installing Apple's Xcode 4 can cause some trouble when compiling Zope packages via buildout.
-This article shows the solution for this problem.</p>
- </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="/blog/2009-12-31-collectiveprettyphoto-for-plone/" rel="bookmark" title="Permalink to collective.prettyphoto for Plone">collective.prettyphoto for Plone</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2009-12-31T00:00:00+01:00"> Dec 31, 2009 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="/author/it-spirit.html">it-spir.it</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <p class="first last">Over the past few days I had some time to finish what was planned for so long: integrate prettyPhoto (written by Stéphane Caron) into Plone.
-Here it is...&quot;</p>
- </div><!-- /.entry-content -->
-        </article></li>
 </ol><!-- /#posts-list -->
 </section><!-- /#content -->
-      </div>
 
 <!--=== Footer Version 1 ===-->
 <div class="footer-v1">
@@ -145,7 +110,10 @@ Here it is...&quot;</p>
               <img id="logo-footer" class="footer-logo" src="/theme/img/logo2-default.png" alt="">
           </a>
           
-<p>We love to build great software.</p>
+<p>We love to <a href="/services.html">turn ideas into
+beautiful things</a>.<br>We love to
+<a href="/references.html">build great software</a>.<br>We love
+<a href="http://python.org" target="_blank">Python</a>.</p>
 
         </div>
         <!-- End About -->
@@ -157,9 +125,9 @@ Here it is...&quot;</p>
               <h2>Latest Posts</h2>
             </div>
             <ul class="list-unstyled latest-list">
-                <li><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime/">Plone: Move instance to another host without downtime</a> <small>Apr 03, 2012</small></li>
-                <li><a href="/blog/2012-03-31-rhodecode-remove-outdated-session-data/">RhodeCode: remove outdated session data</a> <small>Mar 31, 2012</small></li>
-                <li><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed/">Buildout fails on Mac with Xcode 4 installed</a> <small>Jun 20, 2011</small></li>
+                  <li><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime/">Plone: Move instance to another host without downtime</a> <small>Apr 03, 2012</small></li>
+                  <li><a href="/blog/2012-03-31-rhodecode-remove-outdated-session-data/">RhodeCode: remove outdated session data</a> <small>Mar 31, 2012</small></li>
+                  <li><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed/">Buildout fails on Mac with Xcode 4 installed</a> <small>Jun 20, 2011</small></li>
             </ul>
           </div>
         </div>
