@@ -36,7 +36,6 @@ SOCIAL = (
     ('Bitbucket', 'https://bitbucket.org/it-spirit'),
 )
 
-DEFAULT_PAGINATION = 10
 MENUITEMS = (
     ('Home', u'{0}/'.format(SITEURL)),
     ('Services', u'{0}/services.html'.format(SITEURL)),
@@ -49,6 +48,7 @@ MENUITEMS = (
     # ('Archives', '/archives.html'),
 )
 
+DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
