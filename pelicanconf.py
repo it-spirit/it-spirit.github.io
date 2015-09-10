@@ -113,4 +113,5 @@ All rights reserved.
 """
 UNIFY_HEADER = u'header-v3'
 UNIFY_HEADER_FIXED = True
+UNIFY_HEADING_BLOG = u'Our blog: We tell you what we think'
 UNIFY_LAYOUT_BOXED = True
