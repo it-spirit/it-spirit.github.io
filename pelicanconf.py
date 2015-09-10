@@ -116,4 +116,5 @@ UNIFY_FOOTER_RECENT_ARTICLES_HEADLINE = u'Recent Blog Items'
 UNIFY_HEADER = u'header-v3'
 UNIFY_HEADER_FIXED = True
 UNIFY_HEADING_BLOG = u'Our blog: We show you what we think.'
+UNIFY_HEADING_INDEX = u'Our blog: We show you what we think.'
 UNIFY_LAYOUT_BOXED = True
