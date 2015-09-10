@@ -2,3 +2,4 @@
 :status: hidden
 :slug: index
 :save_as: index.html
+:hide_breadcrumbs: True
