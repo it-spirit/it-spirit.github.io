@@ -118,7 +118,7 @@ All rights reserved.
 UNIFY_FOOTER_RECENT_ARTICLES_COUNT = 3
 UNIFY_FOOTER_RECENT_ARTICLES_HEADLINE = u'Recent Blog Items'
 UNIFY_HEADER = u'header-v3'
-UNIFY_HEADING_BLOG = u'Our blog: We show you what we think.'
-UNIFY_HEADING_INDEX = u'Our blog: We show you what we think.'
 UNIFY_HEADER_FIXED = False
+UNIFY_HEADING_BLOG = u'Articles about Technology'
+UNIFY_HEADING_INDEX = u'Articles about Technology'
 UNIFY_LAYOUT_BOXED = True
