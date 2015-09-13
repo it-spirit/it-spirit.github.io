@@ -77,8 +77,8 @@ PAGE_ORDER_BY = 'sort_order'
 PAGE_SAVE_AS = u'{slug}.html'
 PAGE_URL = u'{slug}.html'
 TAGS_SAVE_AS = u'tags/index.html'
-TAG_SAVE_AS = u'tags/{slug}.html'
-TAG_URL = u'tags/{slug}.html'
+TAG_SAVE_AS = u'blog/tags/{slug}.html'
+TAG_URL = u'blog/tags/{slug}.html'
 
 DISPLAY_CATEGORIES_ON_MENU = False
 
