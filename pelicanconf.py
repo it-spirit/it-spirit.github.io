@@ -73,7 +73,6 @@ EXTRA_PATH_METADATA = {
 ARTICLE_URL = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}.html'
 ARTICLE_SAVE_AS = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}.html'
 INDEX_SAVE_AS = u'blog/index.html'
-PAGE_ORDER_BY = 'sort_order'
 PAGE_SAVE_AS = u'{slug}/index.html'
 PAGE_URL = u'{slug}'
 TAGS_SAVE_AS = u'tags/index.html'
@@ -85,6 +84,13 @@ DISPLAY_CATEGORIES_ON_MENU = False
 JINJA_EXTENSIONS = [
     u'jinja2.ext.with_',
 ]
+PLUGIN_PATHS = [
+    u'../../plugins/',
+]
+PLUGINS = [
+    u'pelican-page-order',
+]
+
 THEME = u'pelican_unify'
 
 # Theme options
