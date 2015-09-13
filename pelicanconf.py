@@ -73,6 +73,7 @@ EXTRA_PATH_METADATA = {
 ARTICLE_URL = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}/'
 ARTICLE_SAVE_AS = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}/index.html'
 INDEX_SAVE_AS = u'blog/index.html'
+PAGE_ORDER_BY = 'sort_order'
 TAGS_SAVE_AS = u'tags/index.html'
 TAG_SAVE_AS = u'tags/{slug}.html'
 TAG_URL = u'tags/{slug}.html'
