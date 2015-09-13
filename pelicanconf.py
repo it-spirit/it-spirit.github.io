@@ -58,6 +58,7 @@ STATIC_PATHS = [
     'extra/README',
     'extra/favicon.ico',
 ]
+PATH_METADATA = 'pages/(?P<path>.*)\..*'
 EXTRA_PATH_METADATA = {
     'extra/LICENSE': {
         'path': 'LICENSE',
@@ -88,6 +89,7 @@ PLUGIN_PATHS = [
     u'../../plugins/',
 ]
 PLUGINS = [
+    u'pelican-page-hierarchy',
     u'pelican-page-order',
 ]
 
