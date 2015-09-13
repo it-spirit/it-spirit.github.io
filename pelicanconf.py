@@ -70,8 +70,8 @@ EXTRA_PATH_METADATA = {
     }
 }
 
-ARTICLE_URL = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}/'
-ARTICLE_SAVE_AS = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}/index.html'
+ARTICLE_URL = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}.html'
+ARTICLE_SAVE_AS = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}.html'
 INDEX_SAVE_AS = u'blog/index.html'
 PAGE_ORDER_BY = 'sort_order'
 PAGE_SAVE_AS = u'{slug}.html'
