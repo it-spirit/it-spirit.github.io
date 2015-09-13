@@ -4,7 +4,8 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 
   <head>
-        <title>it-spir.it - Python</title>
+        <title>  Plone: Move instance to another host without downtime &mdash; it-spir.it
+</title>
 
       <!-- Meta -->
       <meta charset="utf-8" />
@@ -37,7 +38,13 @@
 
       <!-- Syndication links -->
 
-  <link rel="stylesheet" href="/theme/css/pages/shortcode_timeline2.css" />
+
+
+    <meta name="author" content="Thomas Massmann" />
+
+    <meta name="tags" content="Nginx" />
+    <meta name="tags" content="Plone" />
+
   </head>
 
     <body class="boxed-layout container">
@@ -63,11 +70,12 @@
       <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
         <div class="container">
           <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/services.html">Services</a></li>
-              <li><a href="/references.html">References</a></li>
-              <li><a href="/blog">Blog</a></li>
 
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/references.html">References</a></li>
+
+              <li class="active"><a href="/blog/index.html">Blog</a></li>
 
           </ul>
         </div><!--/end container-->
@@ -79,36 +87,102 @@
       <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
       <div class="container">
-        <h1 class="pull-left">All tag articles</h1>
+        <h1 class="pull-left">Articles about Technology</h1>
         <ul class="pull-right breadcrumb">
           <li><a href="/" title="it-spir.it">Home</a></li>
-          <li class="active">Tags</li>
+            <li><a href="/category/hosting.html" title="Hosting">Hosting</a></li>
+            <li class="active">Plone: Move instance to another host without downtime</li>
         </ul>
       </div>
     </div>
       <!--=== End Breadcrumbs ===-->
 
       <!--=== Content Part ===-->
-  <div class="container content">
+  <!--=== Blog Posts ===-->
+  <div class="bg-color-light">
+    <div class="container content">
+      <div class="row">
+        <!-- Blog All Posts -->
+        <div class="col-md-9">
+          <div class="news-v3 bg-color-white margin-bottom-30">
+            <div class="news-v3-in">
+              <ul class="list-inline posted-info">
+                  <li>By:
+                      <a class="url fn" href="/author/thomas-massmann.html">Thomas Massmann</a>
+                  </li>
+                  <li>Tags:
+                      <a href="/blog/tags/nginx.html">Nginx</a>,                      <a href="/blog/tags/plone.html">Plone</a>                  </li>
+                <li>Published: <abbr title="2012-04-03T00:00:00+02:00">Apr 03, 2012</abbr></li>
+              </ul>
+              <h2><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime.html" rel="bookmark" title="Permalink to Plone: Move instance to another host without downtime">Plone: Move instance to another host without downtime</a></h2>
+              <p>At <a class="reference external" href="http://propertyshelf.com">Propertyshelf</a> we're hosting a lot of Plone sites.
+Therefor we use virtual machines.
+When sites within an instance grow, it might be necessary to add or extend some components, like adding more ZEO clients or caching (using Varnish or Squid).
+But what if the virtual machines don't have enough power to handle this?
+Then those Plone instances have to be migrated to another, more powerful machine.</p>
+<p>The problem then is to do this without any downtime.
+Of course you first have to create a copy of the existing Plone instance on the new machine, create a snapshot backup of all the related data, and restore this data on the new machine.
+But what about the connected domains?
+The IP addresses differ (if you don't use one webserver that does all the domain handling).
+It can take up to several hours to update all the domains on the root DNS servers.
+But you want your sites online, with up to date data.</p>
+<div class="section" id="nginx-configuration-proxy-pass">
+<h2>Nginx configuration: proxy_pass</h2>
+<p>We're using Nginx as webserver for several reasons (of course Apache does the job as well).
+So the following examples are taken from our Nginx config.</p>
+<p>Imagine you have the following config on your actual server:</p>
+<pre class="literal-block">
+server {
+  listen ip-of-actual-server:80;
+  server_name your-domain.com;
+  location / {
+    proxy_pass http://127.0.0.1:8080/VirtualHostBase/http/your-domain.com:80/your-site/VirtualHostRoot/;
+  }
+}
+</pre>
+<p>On your new server, add the same config.
+The only thing that changes is the IP address:</p>
+<pre class="literal-block">
+server {
+  listen ip-of-new-server:80;
+  server_name your-domain.com;
+  location / {
+    proxy_pass http://127.0.0.1:8080/VirtualHostBase/http/your-domain.com:80/your-site/VirtualHostRoot/;
+  }
+}
+</pre>
+<p>Now, on your old server, adjust the config for your domain.
+Use the proxy_pass directive to point to your new server.
+The important part is the proxy_set_header directive:</p>
+<pre class="literal-block">
+server {
+  listen ip-of-actual-server:80;
+  server_name your-domain.com;
+  location / {
+    proxy_pass          http://your-new-server;
+    proxy_redirect      off;
+    proxy_set_header    Host $host;
+  }
+}
+</pre>
+<p>That's it.
+Now you can move your instance, restart Nginx and update your DNS settings.
+It's save to remove the config on the old server after about one week.
+Then all the root DNS servers should be updated and have the new IP address for your domain.</p>
+</div>
 
-    <ul class="timeline-v2">
-        <li class="equal-height-columns">
-          <div class="cbp_tmtime equal-height-column">
-            <span title="2011-06-20T00:00:00+02:00">Jun 20, 2011</span>
-            <span>2011</span>
+            </div>
           </div>
-          <i class="cbp_tmicon rounded-x hidden-xs"></i>
-          <div class="cbp_tmlabel equal-height-column">
-            <h2><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed/" rel="bookmark" title="Permalink to Buildout fails on Mac with Xcode 4 installed">Buildout fails on Mac with Xcode 4 installed</a></h2>
-            <p class="first last">Installing Apple's Xcode 4 can cause some trouble when compiling Zope packages via buildout.
-This article shows the solution for this problem.</p>
-
-          </div>
-        </li>
-    </ul>
-
-
+        </div>
+        <!-- End Blog All Posts -->
+        <!-- Blog Sidebar -->
+        <div class="col-md-3">
+        </div>
+        <!-- End Blog Sidebar -->
+      </div>
+    </div>
   </div>
+  <!--=== End Blog Posts ===-->
 
 <!--=== Footer Version 1 ===-->
 <div class="footer-v1">
@@ -136,9 +210,9 @@ beautiful things</a>.<br>We love to
               <h2>Recent Blog Items</h2>
             </div>
             <ul class="list-unstyled latest-list">
-                  <li><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime/">Plone: Move instance to another host without downtime</a> <small>Apr 03, 2012</small></li>
-                  <li><a href="/blog/2012-03-31-rhodecode-remove-outdated-session-data/">RhodeCode: remove outdated session data</a> <small>Mar 31, 2012</small></li>
-                  <li><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed/">Buildout fails on Mac with Xcode 4 installed</a> <small>Jun 20, 2011</small></li>
+                  <li><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime.html">Plone: Move instance to another host without downtime</a> <small>Apr 03, 2012</small></li>
+                  <li><a href="/blog/2012-03-31-rhodecode-remove-outdated-session-data.html">RhodeCode: remove outdated session data</a> <small>Mar 31, 2012</small></li>
+                  <li><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed.html">Buildout fails on Mac with Xcode 4 installed</a> <small>Jun 20, 2011</small></li>
             </ul>
           </div>
         </div>

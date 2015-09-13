@@ -4,8 +4,8 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 
   <head>
-        <title>  Buildout fails on Mac with Xcode 4 installed &mdash; it-spir.it
-</title>
+  <link rel="stylesheet" href="/theme/css/pages/shortcode_timeline2.css" />
+        <title>it-spir.it - RhodeCode</title>
 
       <!-- Meta -->
       <meta charset="utf-8" />
@@ -38,14 +38,6 @@
 
       <!-- Syndication links -->
 
-
-
-    <meta name="author" content="Thomas Massmann" />
-
-    <meta name="tags" content="MacOS" />
-    <meta name="tags" content="Buildout" />
-    <meta name="tags" content="Python" />
-
   </head>
 
     <body class="boxed-layout container">
@@ -71,11 +63,12 @@
       <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
         <div class="container">
           <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/services.html">Services</a></li>
-              <li><a href="/references.html">References</a></li>
-              <li><a href="/blog">Blog</a></li>
 
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/references.html">References</a></li>
+
+              <li class="active"><a href="/blog/index.html">Blog</a></li>
 
           </ul>
         </div><!--/end container-->
@@ -87,61 +80,37 @@
       <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
       <div class="container">
-        <h1 class="pull-left">Articles about Technology</h1>
+        <h1 class="pull-left">All tag articles</h1>
         <ul class="pull-right breadcrumb">
           <li><a href="/" title="it-spir.it">Home</a></li>
-            <li><a href="/category/coding.html" title="Coding">Coding</a></li>
-            <li class="active">Buildout fails on Mac with Xcode 4 installed</li>
+          <li class="active">Tags</li>
         </ul>
       </div>
     </div>
       <!--=== End Breadcrumbs ===-->
 
       <!--=== Content Part ===-->
-  <!--=== Blog Posts ===-->
-  <div class="bg-color-light">
-    <div class="container content">
-      <div class="row">
-        <!-- Blog All Posts -->
-        <div class="col-md-9">
-          <div class="news-v3 bg-color-white margin-bottom-30">
-            <div class="news-v3-in">
-              <ul class="list-inline posted-info">
-                  <li>By:
-                      <a class="url fn" href="/author/thomas-massmann.html">Thomas Massmann</a>
-                  </li>
-                  <li>Tags:
-                      <a href="/tags/macos.html">MacOS</a>,                      <a href="/tags/buildout.html">Buildout</a>,                      <a href="/tags/python.html">Python</a>                  </li>
-                <li>Published: <abbr title="2011-06-20T00:00:00+02:00">Jun 20, 2011</abbr></li>
-              </ul>
-              <h2><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed/" rel="bookmark" title="Permalink to Buildout fails on Mac with Xcode 4 installed">Buildout fails on Mac with Xcode 4 installed</a></h2>
-              <p>Xcode4 dropped PPC support.
-After upgrading to Xcode 4 I realized some strange behaviors when running buildout (especially when creating a new Zope buildout where things have to be compiled).</p>
-<p>I got some errors like this:</p>
-<pre class="literal-block">
-compilation terminated.
-lipo: can't open input file: /var/folders/8q/8q7FGaB3FHq8zCFUe4wSVk+++TI/-Tmp-//ccfKEKaS.out (No such file or directory)
-error: command 'gcc-4.2' failed with exit status 1
-</pre>
-<p>The solution to solve this is pretty simple.
-Just add this line to your <tt class="docutils literal">.profile</tt> in your home directory:</p>
-<pre class="literal-block">
-export ARCHFLAGS=&quot;-arch i386 -arch x86_64&quot;
-</pre>
-<p>That's it.</p>
+  <div class="container content">
 
-            </div>
+    <ul class="timeline-v2">
+        <li class="equal-height-columns">
+          <div class="cbp_tmtime equal-height-column">
+            <span title="2012-03-31T00:00:00+02:00">Mar 31, 2012</span>
+            <span>2012</span>
           </div>
-        </div>
-        <!-- End Blog All Posts -->
-        <!-- Blog Sidebar -->
-        <div class="col-md-3">
-        </div>
-        <!-- End Blog Sidebar -->
-      </div>
-    </div>
+          <i class="cbp_tmicon rounded-x hidden-xs"></i>
+          <div class="cbp_tmlabel equal-height-column">
+            <h2><a href="/blog/2012-03-31-rhodecode-remove-outdated-session-data.html" rel="bookmark" title="Permalink to RhodeCode: remove outdated session data">RhodeCode: remove outdated session data</a></h2>
+            <p class="first last">RhodeCode uses Beaker for session management.
+By default the Beaker backend is set to file storage.
+Cleaning up those files by time is necessary.</p>
+
+          </div>
+        </li>
+    </ul>
+
+
   </div>
-  <!--=== End Blog Posts ===-->
 
 <!--=== Footer Version 1 ===-->
 <div class="footer-v1">
@@ -169,9 +138,9 @@ beautiful things</a>.<br>We love to
               <h2>Recent Blog Items</h2>
             </div>
             <ul class="list-unstyled latest-list">
-                  <li><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime/">Plone: Move instance to another host without downtime</a> <small>Apr 03, 2012</small></li>
-                  <li><a href="/blog/2012-03-31-rhodecode-remove-outdated-session-data/">RhodeCode: remove outdated session data</a> <small>Mar 31, 2012</small></li>
-                  <li><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed/">Buildout fails on Mac with Xcode 4 installed</a> <small>Jun 20, 2011</small></li>
+                  <li><a href="/blog/2012-04-03-plone-move-instance-to-another-host-without-downtime.html">Plone: Move instance to another host without downtime</a> <small>Apr 03, 2012</small></li>
+                  <li><a href="/blog/2012-03-31-rhodecode-remove-outdated-session-data.html">RhodeCode: remove outdated session data</a> <small>Mar 31, 2012</small></li>
+                  <li><a href="/blog/2011-06-20-buildout-fails-on-mac-with-xcode-4-installed.html">Buildout fails on Mac with Xcode 4 installed</a> <small>Jun 20, 2011</small></li>
             </ul>
           </div>
         </div>
