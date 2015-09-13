@@ -37,15 +37,15 @@ SOCIAL = (
 )
 
 MENUITEMS = (
-    ('Home', u'{0}/'.format(SITEURL)),
-    ('Services', u'{0}/services.html'.format(SITEURL)),
-    ('References', u'{0}/references.html'.format(SITEURL)),
-    # ('About Us', '/pages/about.html'),
-    # ('Contact Us', '/pages/contact.html'),
-    ('Blog', u'{0}/blog'.format(SITEURL)),
-    # ('Co-Working', '/pages/coworking.html'),
-    # ('Impressum', '/impressum.html'),
-    # ('Archives', '/archives.html'),
+    # ('Home', u'{0}/'.format(SITEURL)),
+    # ('Services', u'{0}/services.html'.format(SITEURL)),
+    # ('References', u'{0}/references.html'.format(SITEURL)),
+    # # ('About Us', '/pages/about.html'),
+    # # ('Contact Us', '/pages/contact.html'),
+    # ('Blog', u'{0}/blog'.format(SITEURL)),
+    # # ('Co-Working', '/pages/coworking.html'),
+    # # ('Impressum', '/impressum.html'),
+    # # ('Archives', '/archives.html'),
 )
 
 DEFAULT_PAGINATION = 5
