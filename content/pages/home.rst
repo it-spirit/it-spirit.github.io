@@ -1,5 +1,7 @@
 :title: IT-Consulting & Software Development
-:menulabel: Home
-:slug: index
 :hide_breadcrumbs: True
+:menulabel: Home
+:save_as: index.html
+:url: index.html
+:slug: index
 :sort_order: 000
