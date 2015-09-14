@@ -34,6 +34,7 @@ SOCIAL = (
     ('Twitter', 'https://twitter.com/it_spirit'),
     ('Github', 'https://github.com/it-spirit'),
     ('Bitbucket', 'https://bitbucket.org/it-spirit'),
+    ('LinkedIn', 'http://www.linkedin.com/pub/thomas-massmann/20/393/259')
 )
 
 DEFAULT_PAGINATION = 5
