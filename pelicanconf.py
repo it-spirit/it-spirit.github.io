@@ -123,6 +123,7 @@ UNIFY_HEADER_FIXED = False
 UNIFY_HEADING_BLOG = u'Our Blog - What We Think.'
 UNIFY_HEADING_INDEX = u'Our Blog - What We Think.'
 UNIFY_LAYOUT_BOXED = True
+UNIFY_FOOTER_LOGO_TEXT = u'Our Philosophy'
 UNIFY_LOGO_HEADER = u'images/logo_itspirit.gif'
 UNIFY_LOGO_HEADER_SIZE = u'150'
 UNIFY_PLUGIN_PAGE_ORDER = True
