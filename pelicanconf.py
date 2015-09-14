@@ -45,6 +45,9 @@ DEFAULT_PAGINATION = 5
 STATIC_PATHS = ['images', 'extra', ]
 PATH_METADATA = 'pages/(?P<path>.*)\..*'
 EXTRA_PATH_METADATA = {
+    'extra/CNAME': {
+        'path': 'CNAME',
+    },
     'extra/LICENSE': {
         'path': 'LICENSE',
     },
