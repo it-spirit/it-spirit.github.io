@@ -93,10 +93,10 @@ UNIFY_SHOW_PAGE_BREADCRUMBS = True
 UNIFY_FAVICON = u'favicon.ico'
 UNIFY_FOOTER = u'footer-v1'
 UNIFY_FOOTER_ABOUT = """
-<p>We love to <a href="{site_url}/services">turn ideas into
+We love to <a href="{site_url}/services">turn ideas into
 beautiful things</a>.<br>We love to
 <a href="{site_url}/references">build great software</a>.<br>We love
-<a href="http://python.org" target="_blank">Python</a>.</p>
+<a href="http://python.org" target="_blank">Python</a>.
 """.format(site_url=SITEURL)
 
 UNIFY_FOOTER_CONTACT = """
@@ -108,10 +108,9 @@ Fax: +49-(0)8341-9966186-9<br>
 Email: <a href="mailto:info@it-spir.it" class="">info@it-spir.it</a></p>
 """
 UNIFY_FOOTER_COPYRIGHT = """
-<p>Copyright &copy; 2015 <a href="http://it-spir.it"
+Copyright &copy; 2015 <a href="http://it-spir.it"
 title="IT-Consulting &amp; Software Development">it-spirit</a>.
 All rights reserved.
-</p>
 """
 UNIFY_FOOTER_RECENT_ARTICLES_COUNT = 3
 UNIFY_FOOTER_RECENT_ARTICLES_HEADLINE = u'Recent Blog Items'
