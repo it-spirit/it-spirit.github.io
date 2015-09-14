@@ -1,4 +1,9 @@
 /* Add here all your css styles (customizations) */
+
+.breadcrumbs h1 {
+  font-size: 28px;
+}
+
 .timeline-v2 > li .cbp_tmlabel h2 {
     text-transform: none;
 }
