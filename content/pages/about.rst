@@ -3,3 +3,4 @@
 :menulabel: About Us
 :page_order: 5
 :slug: about
+:status: hidden
