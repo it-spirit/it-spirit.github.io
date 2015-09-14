@@ -40,7 +40,7 @@ SOCIAL = (
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
 STATIC_PATHS = ['images', 'extra', ]
 PATH_METADATA = 'pages/(?P<path>.*)\..*'
@@ -56,7 +56,7 @@ EXTRA_PATH_METADATA = {
     },
     'extra/favicon.ico': {
         'path': 'favicon.ico',
-    }
+    },
 }
 
 ARTICLE_URL = u'blog/{date:%Y}-{date:%m}-{date:%d}-{slug}.html'
