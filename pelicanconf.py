@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import datetime
 
+YEAR = datetime.datetime.now().year
 AUTHOR = u'it-spir.it'
 SITENAME = u'it-spir.it'
+SITETITLE = u'IT-Consulting &amp; Software Development'
 SITEURL = u''
 
 PATH = 'content'
@@ -112,10 +115,15 @@ Fax: +49-(0)8341-9966186-9<br>
 Email: <a href="mailto:info@it-spir.it" class="">info@it-spir.it</a></p>
 """
 UNIFY_FOOTER_COPYRIGHT = """
-Copyright &copy; 2015 <a href="http://it-spir.it"
-title="IT-Consulting &amp; Software Development">it-spirit</a>.
+Copyright &copy; 2013-{year} <a href="{site_url}/"
+title="{site_title}">{site_name}</a>.
 All rights reserved.
-"""
+""".format(
+    site_name=SITENAME,
+    site_title=SITETITLE,
+    site_url=SITEURL,
+    year=YEAR,
+)
 UNIFY_FOOTER_RECENT_ARTICLES_COUNT = 3
 UNIFY_FOOTER_RECENT_ARTICLES_HEADLINE = u'Recent Blog Items'
 UNIFY_HEADER = u'header-v3'
