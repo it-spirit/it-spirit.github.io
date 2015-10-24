@@ -98,13 +98,24 @@ UNIFY_SHOW_ARTICLE_BREADCRUMBS = True
 UNIFY_SHOW_ARTICLE_BREADCRUMBS_CATEGORY = False
 UNIFY_SHOW_PAGE_BREADCRUMBS = True
 UNIFY_FAVICON = u'favicon.ico'
+
+UNIFY_LOGO_FOOTER = u'images/logo2_footer.png'
+UNIFY_LOGO_FOOTER_SIZE = u'86'
 UNIFY_FOOTER = u'footer-v1'
 UNIFY_FOOTER_ABOUT = """
 We love to <a href="{site_url}/services">turn ideas into
 beautiful things</a>.<br>We love to
 <a href="{site_url}/references">build great software</a>.<br>We love
-<a href="http://python.org" target="_blank">Python</a>.
-""".format(site_url=SITEURL)
+<a href="http://python.org" target="_blank">Python</a>.<br><br>
+<a href="{site_url}/"><img alt="{logo_alt}" title="{logo_title}"
+src="{site_url}/{logo_url}" width="{logo_width}" /></a>
+""".format(
+    site_url=SITEURL,
+    logo_alt=SITENAME,
+    logo_title=SITETITLE,
+    logo_url=UNIFY_LOGO_FOOTER,
+    logo_width=UNIFY_LOGO_FOOTER_SIZE,
+)
 
 UNIFY_FOOTER_CONTACT = """
 <p>it-spirit<br>
