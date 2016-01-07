@@ -106,7 +106,8 @@ UNIFY_FOOTER_ABOUT = """
 We love to <a href="{site_url}/services">turn ideas into
 beautiful things</a>.<br>We love to
 <a href="{site_url}/references">build great software</a>.<br>We love
-<a href="http://python.org" target="_blank">Python</a>.<br><br>
+<a href="http://python.org" target="_blank">Python</a>.
+<br>We solve your problems.<br><br>
 <a href="{site_url}/"><img alt="{logo_alt}" title="{logo_title}"
 src="{site_url}/{logo_url}" width="{logo_width}" /></a>
 """.format(
