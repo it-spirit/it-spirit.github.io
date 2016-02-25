@@ -78,7 +78,7 @@ JINJA_EXTENSIONS = [
     u'jinja2.ext.with_',
 ]
 PLUGIN_PATHS = [
-    u'../../plugins/',
+    u'../../Plugins/',
 ]
 PLUGINS = [
     u'pelican-page-hierarchy',
